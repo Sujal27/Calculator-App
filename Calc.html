@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<br><br>
+
+	<h1>CALCULATOR APP- PLAY WITH MATH</h1>
+	<br><br>
+	
+	
+	<style>
+			h1{
+	font-family: verdana;
+	font-size:100%;
+	margin-left: 600px;
+}
+		body{
+			background:skyblue;
+		}
+		<style type="text/css">
+  body {
+    color: purple;
+    background-color: #d8da3d }
+  
+		{
+			box-sizing: border-box;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+		}
+		.wrap{
+			width:400px;
+			margin:auto;
+			height:auto;
+			background:black;
+			padding:20px;
+			
+		}
+
+		input[type=text]{
+			width:92%;
+			padding:10px;
+			height:30px;
+			font-size: 17px;
+			font-weight: bold;
+			margin-top: 15px;
+			border-radius: 7px;
+			border-color: orange;
+		}
+
+		input[type=button]{
+			width:95px;
+			padding: 15px;
+			height: auto;
+			font-size: 22px;
+			font-weight: bold;
+			border-radius:5px;
+			color: green;
+			border-color: yellow; 
+		}
+		button{
+            width:200px;
+            height: 50px;
+            color: brown;
+            margin-left: 657px;
+            font-family: verdana;
+            border-color: violet;
+		}
+#del{
+	color:red;
+}
+
+}
+</style>
+</head>
+<body>
+	<script>
+  function download_csv(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV FILE
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // We have to create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Make sure that the link is not displayed
+    downloadLink.style.display = "none";
+
+    // Add the link to your DOM
+    document.body.appendChild(downloadLink);
+
+    // Lanzamos
+    downloadLink.click();
+}
+
+
+
+document.querySelector("button").addEventListener("click", function () {
+    var html = document.querySelector("table").outerHTML;
+	export_table_to_csv(html, "table.csv");
+});
+
+</div>
+function download_csv(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV FILE
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+    // We have to create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Make sure that the link is not displayed
+    downloadLink.style.display = "none";
+
+    // Add the link to your DOM
+    document.body.appendChild(downloadLink);
+
+    // Lanzamos
+    downloadLink.click();
+
+
+
+document.querySelector("button").addEventListener("click", function () {
+    var html = document.querySelector("Calculation").outerHTML;
+	export_table_to_csv(html, "Calculation.csv");
+});
+</script>
+	<div class = "wrap">
+		<form name ="cal">
+			<input type ="text" name ="display">
+			<br><br>
+			<input type ="button" value ="9" onclick="cal.display.value+='9' ">
+			<input type ="button" value ="8" onclick="cal.display.value+='8' ">
+			<input type ="button" value ="7" onclick="cal.display.value+='7' ">
+			<input type ="button" value ="+" onclick="cal.display.value+='+' ">
+			<br><br>
+			<input type ="button" value ="6" onclick="cal.display.value+='6' ">
+			<input type ="button" value ="5" onclick="cal.display.value+='5' ">
+			<input type ="button" value ="4" onclick="cal.display.value+='4' ">
+			<input type ="button" value ="-" onclick="cal.display.value+='-' ">
+			<br><br>
+			<input type ="button" value ="3" onclick="cal.display.value+='3' ">
+			<input type ="button" value ="2" onclick="cal.display.value+='2' ">
+			<input type ="button" value ="1" onclick="cal.display.value+='1' ">
+			<input type ="button" value ="*" onclick="cal.display.value+='*' ">
+			<br><br>
+			<input type ="button" value ="0" onclick="cal.display.value+='0' ">
+			<input type ="button" value ="/" onclick="cal.display.value+='/' ">
+			<input type ="button" value ="%" onclick="cal.display.value+='%' ">
+			<input type ="button" value ="=" onclick="cal.display.value = eval (cal.display.value)">
+			<br><br>
+			<input type ="button" value ="(" onclick="cal.display.value+='(' ">
+			<input type ="button" value =")" onclick="cal.display.value+=')' ">
+			<input type ="button" value ="." onclick="cal.display.value+='.' ">
+			<input type ="button" value ="C" onclick="cal.display.value= '' "id ="del">
+
+		</form>
+
+	</div>
+	<br><br>
+	
+<div class="btn-group">
+  <button>Download Calculation</button>
+  
+</form>
+</body>
+</html>
