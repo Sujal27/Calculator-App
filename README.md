@@ -8,3 +8,4 @@ Steps to Use the Calculator:
 5. Perform as many calculations you want to!
 
 Click on this link: https://sujal27.github.io/Calculator-App/Calc.html
+You can also check the working of the Calculator App put in the form of a video. Click on the view raw to download the video and watch.
