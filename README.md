@@ -10,3 +10,4 @@ Steps to Use the Calculator:
 Click on this link: https://sujal27.github.io/Calculator-App/Calc.html
 
 You can also view the working of the Calculator App put in the form of a video. Click on the view raw to download the video and watch.
+Click on this link: https://www.awesomescreenshot.com/video/788393?key=27aa0be1ecc5d77ccd3efa7749630886
